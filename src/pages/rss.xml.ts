@@ -9,7 +9,7 @@ export async function GET() {
   return rss({
     title: SITE.title,
     description: SITE.desc,
-    site: SITE.website + SITE.base,
+    site: SITE.website,
     items: sortedPosts.map(({ data, slug }) => ({
       link: `posts/${slug}/`,
       title: data.title,
